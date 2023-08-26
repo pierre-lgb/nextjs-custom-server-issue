@@ -10,7 +10,8 @@ export default function Editor({ documentId }: { documentId: string }) {
         const provider = new HocuspocusProvider({
             name: `document.${documentId}`,
             url: `${
-                process.env.NEXT_PUBLIC_COLLABORATION_URL || "/collaboration"
+                process.env.NEXT_PUBLIC_COLLABORATION_URL ||
+                "http://localhost:3000/collaboration"
             }/document.${documentId}`,
             document: ydoc,
             // We start the connection inside useLayoutEffect()
